@@ -3,18 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redirect Example</title>
+    <title>RecetteMika</title>
     <style>
-	
-		:root {
-			--longueur-max: 600px;
-			--espace-gap: 20px;
-		}
-	
         body {
-
             font-family: Arial, sans-serif;
-            max-width: var(--longueur-max);
+            max-width: 600px;
             margin: 50px auto;
             padding: 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -26,27 +19,9 @@
             padding: 30px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
-            filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.3));
-        }
-        button {
-            background: #ff6b6b;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            margin: 10px;
-            border-radius: 25px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
-        button:hover {
-            background: #ff5252;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
         }
         .case {
-			width: calc(100% - var(--espace-gap) / 2);
             background: rgba(255, 255, 255, 0.15);
             padding: 20px;
             border-radius: 12px;
@@ -57,10 +32,9 @@
         .case:hover {
             background: rgba(255, 255, 255, 0.25);
             transform: translateY(-3px);
-            filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.3));
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
-        .case {
-			position: relative;
+        .case a {
             color: #fff;
             text-decoration: none;
             font-size: 18px;
@@ -91,11 +65,7 @@
 			text-decoration: none;
 			color: inherit;
 			display: block;
-		} 
-		.case a {
-			position: absolute;
-			inset: 0;
-		}    
+		}  
 </style>
 </head>
 <body>
