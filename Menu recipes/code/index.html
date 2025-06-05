@@ -136,6 +136,27 @@
 
 
     <script>
+	    // Dans votre index.html
+document.addEventListener('DOMContentLoaded', function() {
+    // Intercepter les clics sur les liens
+    document.querySelectorAll('a[href^="/"]').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            const path = this.getAttribute('href');
+            
+            // Router les URLs
+            switch(path) {
+                case '/Dejeuner':
+                    window.location.href = 'dejeuner/dejeuner.html';
+                    break;
+                case '/Desserts':
+                    window.location.href = 'desserts/desserts.html';
+                    break;
+                // etc...
+            }
+        });
+    });
+});
     </script>
 </body>
 </html>
