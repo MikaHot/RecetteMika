@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirect Example</title>
+    <style>
+	
+		:root {
+			--longueur-max: 600px;
+			--espace-gap: 20px;
+		}
+	
+        body {
+
+            font-family: Arial, sans-serif;
+            max-width: var(--longueur-max);
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            filter: drop-shadow(0 8px 32px rgba(0, 0, 0, 0.3));
+        }
+        button {
+            background: #ff6b6b;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin: 10px;
+            border-radius: 25px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+        button:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        .case {
+			width: calc(100% - var(--espace-gap) / 2)
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .case:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-3px);
+            filter: drop-shadow(0 8px 25px rgba(0, 0, 0, 0.3));
+        }
+        .case {
+			position: relative;
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+        }
+        .case a:hover {
+            color: #ff6b6b;
+        }
+        .case img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+		.case span {
+			color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s ease;
+		}
+		a.case {
+			text-decoration: none;
+			color: inherit;
+			display: block;
+		} 
+		.case a {
+			position: absolute;
+			inset: 0;
+		}    
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Catégories de recettes</h1>
+        <p>Créer par Mikaël Maltais</p>
+        
+		
+		<div class="case">
+			<a href="/Dejeuner" ></a>
+				<span>Déjeuner</span>
+				<img src="image/Déjeuner.png">
+		</div>
+		
+		<a href="/Desserts" class="case">
+			<div>
+				<span>Désserts</span>
+				<img src="image/Desserts.png">
+			</div>
+		</a>
+		
+		<a href="/Soupes" class="case">
+			<div>
+				<span>Soupes</span>
+				<img src="image/Soupes.png">
+			</div>
+		</a>
+		
+		<a href="/Pates" class="case">
+			<div>
+				<span>Pâtes</span>
+				<img src="image/Pasta.png">
+			</div>
+		</a>
+	
+    </div>
+
+
+
+    <script>
+    </script>
+</body>
+</html>

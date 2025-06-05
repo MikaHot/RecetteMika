@@ -1,0 +1,58 @@
+Section :
+- Dessert
+	- Gateau (carotte)
+	- Biscuits
+	- Crème Brûlé
+	- Tarte (Rubarbe - Raisin - Pomme - Bleut)
+	- Beigne au patate (recette papa)
+	- Chausson au pomme
+	- galette (mamie)
+	cookies banane avoine
+- Déjeuner
+	- Pain
+	- Muffins (Zuchini - Banane - Carotte)
+	
+ - Repas 
+	- Sandwich (côte levé)
+	- Pain de viande
+	- Boulette de viande
+	- Pâté chinois
+	- pâté au poulet
+	- pâté de viande
+	- Jambon erable
+	- Jambon salé
+	- Jambon ananas
+- Pâte
+	- Macaronie à viande (recette nancy)
+	- Spag à viande chinois
+	- Lazagne
+	- Pâte farci (maman)
+	
+- Soupes
+	- Soupe Barley
+	- Soupe aux légumes
+	- Soupe aux riz
+	- Soupe aux mais
+	- Crème de chouffleur
+	- Soupe / crème de citrouille
+	- Crème de carotte 
+	
+- Sauce
+	- Spag (mamie)
+	- Spag (maman)
+	
+- Riz
+	- Riz brun (recette papa)
+
+
+- Patate aux four
+- Patate farci (mamie et maman)
+- Patate / frite en cartier au four asaisonné
+- Patate en dé au four
+	
+	
+fonction imprimé et pour chaque catégorie une redirection vers une autre page avec les trucs de la catégorie choisi avec une option de retour en arrière.
+	
+	
+	Décaller les gateaux par exemple de un afin de faire une sélection de sorte sans image genre 
+	 - Gateau carotte - Crunchie - Dromestique etc.
