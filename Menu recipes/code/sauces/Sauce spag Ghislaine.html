@@ -6,7 +6,7 @@
         body {
             font-family: Arial, sans-serif;
             width: clamp(300px, 85vw, 600px); /*300px = largeur min | 60vw = en respectant 60% de la largeur de l'écran | 600px = largeur max */
-            margin: 50px auto;
+            margin: 20px auto;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
@@ -23,16 +23,7 @@
             background: rgba(255, 255, 255, 0.15);
             padding: 20px;
             border-radius: 12px;
-            margin: 20px 0;
             border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .case a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
         }
         .case img {
             max-width: 100%;
@@ -44,14 +35,6 @@
 			color: #fff;
             text-decoration: none;
             font-size: clamp(16px, 2vw, 24px); /*16px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-		}
-        .case h1 {
-			color: #fff;
-            text-decoration: none;
-            font-size: clamp(16px, 2vw, 36px); /*16px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
@@ -83,16 +66,11 @@
             margin: 5px auto;
             max-width: 90%;
         }
-        /*@media (orientation: portrait) {
-            .case span, li, h1 {
-                color:red;
-            }
-        }*/
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Sauce spaghetti</h1>
+        <h1 style="margin-top:-10px;margin-bottom:10px;">Sauce spaghetti</h1>
         
 		<a class="case">
 			<div>
