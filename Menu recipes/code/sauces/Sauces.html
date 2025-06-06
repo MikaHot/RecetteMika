@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sauces</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            width: clamp(300px, 60vw, 600px); /*300px = largeur min | 60vw = en respectant 60% de la largeur de l'écran | 600px = largeur max */
+            margin: 50px auto;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .case {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .case a {
+            color: #fff;
+            text-decoration: none;
+            font-size: clamp(12px, 2vw, 24px);
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .case img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+		.case span {
+			color: #fff;
+            text-decoration: none;
+            font-size: clamp(12px, 2vw, 24px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+		}
+        .case h1 {
+			color: #fff;
+            text-decoration: none;
+            font-size: clamp(18px, 2vw, 36px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
+		}
+		a.case {
+			text-decoration: none;
+			color: inherit;
+			display: block;
+		}
+        /*@media (orientation: portrait) {
+            .case span, li, h1 {
+                color:red;
+            }
+        }*/
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Section des sauces</h1>
+        
+		<a href="Sauce%20a%20spag%20Ghislaine" class="case">
+			<div>
+				<span>Sauce spaghetti Ghislaine</span>
+			</div>
+		</a>
+
+    </div>
+</body>
+</html>
