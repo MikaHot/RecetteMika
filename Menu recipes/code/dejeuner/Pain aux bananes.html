@@ -7,12 +7,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            max-width: 600px;
+            width: clamp(300px, 60vw, 600px); /*300px = largeur min | 60vw = en respectant 60% de la largeur de l'écran | 600px = largeur max */
             margin: 50px auto;
             padding: 20px;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
+            min-height: 100vh;
         }
         .container {
             background: rgba(255, 255, 255, 0.1);
@@ -29,11 +30,6 @@
             transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.2);
         }
-        .case:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-        }
         .case a {
             color: #fff;
             text-decoration: none;
@@ -41,10 +37,6 @@
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
-            transition: color 0.3s ease;
-        }
-        .case a:hover {
-            color: #ff6b6b;
         }
         .case img {
             max-width: 100%;
@@ -55,17 +47,29 @@
 		.case span {
 			color: #fff;
             text-decoration: none;
-            font-size: clamp(12px, 2vw, 24px);
+            font-size: clamp(12px, 2vw, 24px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
-            transition: color 0.3s ease;
+		}
+        .case h1 {
+			color: #fff;
+            text-decoration: none;
+            font-size: clamp(18px, 2vw, 36px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-weight: bold;
+            display: block;
+            margin-bottom: 10px;
 		}
 		a.case {
 			text-decoration: none;
 			color: inherit;
 			display: block;
 		}
+        /*@media (orientation: portrait) {
+            .case span, li, h1 {
+                color:red;
+            }
+        }*/
     </style>
 </head>
 <body>
