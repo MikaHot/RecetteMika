@@ -1,15 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="fr"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pain aux bananes</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            width: clamp(300px, 60vw, 600px); /*300px = largeur min | 60vw = en respectant 60% de la largeur de l'écran | 600px = largeur max */
-            margin: 50px auto;
-            padding: 20px;
+            width: clamp(360px, 98vw, 600px); /*360px = largeur min | 98vw = en respectant 98% de la largeur de l'écran | 600px = largeur max */
+            margin: 5px auto;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
@@ -17,7 +15,7 @@
         }
         .container {
             background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
+            padding: 10px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -26,17 +24,7 @@
             background: rgba(255, 255, 255, 0.15);
             padding: 20px;
             border-radius: 12px;
-            margin: 20px 0;
-            transition: all 0.3s ease;
             border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .case a {
-            color: #fff;
-            text-decoration: none;
-            font-size: clamp(12px, 2vw, 24px);
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
         }
         .case img {
             max-width: 100%;
@@ -47,15 +35,7 @@
 		.case span {
 			color: #fff;
             text-decoration: none;
-            font-size: clamp(12px, 2vw, 24px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-		}
-        .case h1 {
-			color: #fff;
-            text-decoration: none;
-            font-size: clamp(18px, 2vw, 36px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-size: clamp(16px, 2vw, 24px); /*16px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
@@ -71,7 +51,7 @@
             max-width: 90%;
             color: #fff;
             text-decoration: none;
-            font-size: clamp(12px, 2vw, 24px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-size: clamp(16px, 2vw, 24px); /*16px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
@@ -87,36 +67,34 @@
             margin: 5px auto;
             max-width: 90%;
         }
-        /*@media (orientation: portrait) {
-            .case span, li, h1 {
-                color:red;
-            }
-        }*/
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Recette de pain aux bananes</h1>
+        <h1 style="margin-top:-10px;margin-bottom:10px;">Pain aux bananes</h1>
         
 		<a class="case">
 			<div>
-				<span>Pain aux bananes<br>Recette de *</span>
+				<span>Recette de *</span>
 				<img src="image/Pain aux bananes.png"><br><br>
-				<span>Ingrédients</span>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li>
-				<li></li><br><br>
+            <div class="leftspan">
+                <span>Ingrédients</span>
+                <ul style="margin-bottom:20px;margin-left:-20px;">
+                    
+                    <li></li>
+				    <li></li>
+				    <li></li>
+				    <li></li>
+				    <li></li>
+				    <li></li></ul>
 				
 				<span>Préparation</span>
-				<ul> </ul>
-				<ul> </ul>
-				<ul> </ul>
-			</div>
+                <p></p>
+                <p></p>
+                <p></p>
+			</div></div>
 		</a>
 
     </div>
-</body>
-</html>
+
+</body></html>
