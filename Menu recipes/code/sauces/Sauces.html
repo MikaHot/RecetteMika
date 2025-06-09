@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sauces</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            width: clamp(300px, 60vw, 600px); /*300px = largeur min | 60vw = en respectant 60% de la largeur de l'écran | 600px = largeur max */
-            margin: 50px auto;
-            padding: 20px;
+            width: clamp(320px, 80vw, 600px); /*320px = largeur min | 80vw = en respectant 60% de la largeur de l'écran | 600px = largeur max */
+            margin: 32px auto;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
@@ -17,7 +14,7 @@
         }
         .container {
             background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
+            padding: 20px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -35,34 +32,20 @@
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
         }
-        .case a {
-            color: #fff;
-            text-decoration: none;
-            font-size: clamp(12px, 2vw, 24px);
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
-            transition: color 0.3s ease;
-        }
-        .case img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
 		.case span {
 			color: #fff;
             text-decoration: none;
-            font-size: clamp(12px, 2vw, 24px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-size: clamp(12px, 3.4vw, 24px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
             font-weight: bold;
             display: block;
-            margin-bottom: 10px;
+            margin-bottom: 16px;
+            margin-top: 16px;
             transition: color 0.3s ease;
 		}
         .case h1 {
 			color: #fff;
             text-decoration: none;
-            font-size: clamp(18px, 2vw, 36px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-size: clamp(18px, 2vw, 40px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
@@ -72,11 +55,6 @@
 			color: inherit;
 			display: block;
 		}
-        /*@media (orientation: portrait) {
-            .case span, li, h1 {
-                color:red;
-            }
-        }*/
     </style>
 </head>
 <body>
@@ -85,12 +63,10 @@
         
 		<a href="Sauce%20spag%20Ghislaine" class="case">
 			<div>
-                <ul></ul>
 				<span>Sauce spaghetti Ghislaine</span>
-                <ul></ul>
 			</div>
 		</a>
 
     </div>
-</body>
-</html>
+    
+</body></html>
