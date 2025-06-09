@@ -6,7 +6,7 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            width: clamp(360px, 98vw, 600px); /*360px = largeur min | 98vw = en respectant 98% de la largeur de l'écran | 600px = largeur max */
+            width: clamp(355px, 98vw, 600px); /*355px = largeur min | 98vw = en respectant 98% de la largeur de l'écran | 600px = largeur max */
             margin: 5px auto;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -67,6 +67,32 @@
             margin: 5px auto;
             max-width: 90%;
         }
+        .back-arrow {
+        fill: rgba(0, 0, 255, 0.45);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        }
+        .back-arrow:hover {
+        fill: rgba(25, 65, 235, 0.65);
+        transform: scale(1.1);
+        }
+        .home-icon {
+        fill: rgba(0, 0, 255, 0.45);
+        cursor: pointer;
+        transition: all 0.3s ease;
+        }
+        .home-icon:hover {
+        fill: rgba(25, 65, 235, 0.65);
+        transform: scale(1.1);
+        }
+        .nav-icons {
+            position: absolute;
+            top: 0px;
+            left: 5px;
+            display: flex;
+            width: clamp(54px, 20vw, 108px);
+            height: clamp(45px, 20vw, 90px);
+        }
     </style>
 </head>
 <body>
@@ -74,6 +100,16 @@
         <h1 style="margin-top:-10px;margin-bottom:10px;">Pain aux bananes</h1>
         
 		<a class="case">
+            <div class="nav-icons">
+                <svg width="54" height="45" viewBox="0 0 24 24">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.42-1.41L7.83 13H20v-2z" class="back-arrow"></path>
+                </svg>
+
+                <svg width="54" height="45" viewBox="0 0 24 24">
+                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" class="home-icon"></path>
+                </svg>
+            </div>
+
 			<div>
 				<span>Recette de *</span>
 				<img src="image/Pain aux bananes.png"><br><br>
@@ -92,9 +128,19 @@
                 <p></p>
                 <p></p>
                 <p></p>
-			</div></div>
+                </div></div>
 		</a>
 
     </div>
+<script>
+//Retour en arrière
+document.querySelector('.back-arrow').addEventListener('click', function() {
+    window.history.back();
+});
 
+//Retourne au menu principal
+document.querySelector('.home-icon').addEventListener('click', function() {
+    window.location.href = '../code/';
+});
+</script>
 </body></html>
