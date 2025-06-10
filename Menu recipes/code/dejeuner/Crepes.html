@@ -1,21 +1,22 @@
-<html lang="en"><head>
+<!DOCTYPE html>
+<html lang="fr"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crêpes</title>
+    <title>Gaufres</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            width: clamp(300px, 60vw, 600px); /*300px = largeur min | 60vw = en respectant 60% de la largeur de l'écran | 600px = largeur max */
-            margin: 50px auto;
-            padding: 20px;
+            width: clamp(355px, 98vw, 600px);
+            margin: 5px auto;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
             min-height: 100vh;
+            position: relative;
         }
         .container {
             background: rgba(255, 255, 255, 0.1);
-            padding: 30px;
+            padding: 10px;
             border-radius: 15px;
             backdrop-filter: blur(10px);
             box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
@@ -24,16 +25,7 @@
             background: rgba(255, 255, 255, 0.15);
             padding: 20px;
             border-radius: 12px;
-            margin: 20px 0;
             border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-        .case a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            display: block;
-            margin-bottom: 10px;
         }
         .case img {
             max-width: 100%;
@@ -41,34 +33,26 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-		.case span {
-			color: #fff;
+        .case span {
+            color: #fff;
             text-decoration: none;
-            font-size: clamp(12px, 2vw, 24px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-size: clamp(16px, 2vw, 24px);
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
-		}
-        .case h1 {
-			color: #fff;
+        }
+        a.case {
             text-decoration: none;
-            font-size: clamp(18px, 2vw, 36px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
-            font-weight: bold;
+            color: inherit;
             display: block;
-            margin-bottom: 10px;
-		}
-		a.case {
-			text-decoration: none;
-			color: inherit;
-			display: block;
-		}
+        }
         .leftspan span {
             text-align: left;
             margin: 5px auto;
             max-width: 90%;
             color: #fff;
             text-decoration: none;
-            font-size: clamp(12px, 2vw, 24px); /*12px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-size: clamp(16px, 2vw, 24px);
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
@@ -84,40 +68,90 @@
             margin: 5px auto;
             max-width: 90%;
         }
-        /*@media (orientation: portrait) {
-            .case span, li, h1 {
-                color:red;
-            }
-        }*/
+        .nav-icons {
+            position: absolute;
+            display: flex;
+            width: clamp(54px, 20vw, 108px);
+            height: clamp(45px, 20vw, 90px);
+            z-index: 10;
+        }
+        .nav-button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 50%;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        .back-arrow,
+        .home-icon {
+            fill: rgba(0, 0, 255, 0.45);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .nav-button:hover .back-arrow,
+        .nav-button:hover .home-icon {
+            fill: rgba(25, 65, 235, 0.65);
+            transform: scale(1.1);
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Recettes de crêpes</h1>
-        
-		<a class="case">
-			<div>
-				<span>Rendement : 8 à 10 crêpes<br>Recette de Ricardo</span>
-				<img src="image/Crêpes.png"><br><br>
-			<div class="leftspan">
-                <span>Ingrédients</span>
-                <ul style="margin-bottom:20px;margin-left:-20px;">
+    <div class="nav-icons">
+        <button class="nav-button" onclick="goBack()">
+            <svg width="54" height="45" viewBox="0 0 24 24" class="back-arrow">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.42-1.41L7.83 13H20v-2z"/>
+            </svg>
+        </button>
 
-                    <li>310 ml (1 1/4 tasse) de lait</li>
-                    <li>2 oeufs</li>
-                    <li>115 g (3/4 tasse) de farine tout usage non blanchie</li>
-                    <li>30 ml (2 c. à soupe) de sucre</li>
-                    <li>1 pincée de sel</li>
-                    <li>Beurre, pour badigeonner</li>
-                </ul>
-                    
-				<span>Préparation</span>
-				<p>Dans un mélangeur, mélanger tous les ingrédients jusqu'à ce que la pâte soit lisse et homogène.</p>
-				<p>Chauffer une poêle antiadhésive d’environ 18 cm (7 po) de diamètre à feu moyen. Lorsque la poêle est chaude, la badigeonner de beurre avec un pinceau.</p>
-				<p>Pour chaque crêpe, verser environ 60 ml (1/4 tasse) de pâte au centre de la poêle. En faisant pivoter la poêle, répandre la pâte également pour recouvrir tout le fond. Lorsque le rebord se décolle facilement et commence à dorer, soit après environ 1 minute, retourner la crêpe à l’aide d’une spatule. Poursuivre la cuisson environ 30 secondes et retirer la crêpe de la poêle. Réserver sur une assiette. Couvrir de papier d’aluminium et réserver au chaud pour éviter qu'elles ne sèchent.</p>
-			</div></div>
-		</a>
-
+        <button class="nav-button" onclick="goHome()">
+            <svg width="54" height="45" viewBox="0 0 24 24" class="home-icon">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/>
+            </svg>
+        </button>
     </div>
+
+    <div class="container">
+        <h1 style="margin-top:-10px;margin-bottom:10px;">Recettes de crêpes</h1>
+        
+        <div class="case">
+            <div>
+                <span>Rendement : 8 à 10 crêpes<br>Recette de Ricardo</span>
+                <img src="image/Crêpes.png"><br><br>
+                <div class="leftspan">
+                    <span>Ingrédients</span>
+                    <ul style="margin-bottom:20px;margin-left:-20px;">
+                        <li>310 ml (1 1/4 tasse) de lait</li>
+                        <li>2 oeufs</li>
+                        <li>115 g (3/4 tasse) de farine tout usage non blanchie</li>
+                        <li>30 ml (2 c. à soupe) de sucre</li>
+                        <li>1 pincée de sel</li>
+                        <li>Beurre, pour badigeonner</li>
+                    </ul>
+                    
+                    <span>Préparation</span>
+				    <p>Dans un mélangeur, mélanger tous les ingrédients jusqu'à ce que la pâte soit lisse et homogène.</p>
+				    <p>Chauffer une poêle antiadhésive d’environ 18 cm (7 po) de diamètre à feu moyen. Lorsque la poêle est chaude, la badigeonner de beurre avec un pinceau.</p>
+				    <p>Pour chaque crêpe, verser environ 60 ml (1/4 tasse) de pâte au centre de la poêle. En faisant pivoter la poêle, répandre la pâte également pour recouvrir tout le fond. Lorsque le rebord se décolle facilement et commence à dorer, soit après environ 1 minute, retourner la crêpe à l’aide d’une spatule. Poursuivre la cuisson environ 30 secondes et retirer la crêpe de la poêle. Réserver sur une assiette. Couvrir de papier d’aluminium et réserver au chaud pour éviter qu'elles ne sèchent.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goHome() {
+            window.location.href = '../../code/';
+        }
+    </script>
 
 </body></html>
