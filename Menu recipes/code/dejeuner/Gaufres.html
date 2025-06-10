@@ -5,12 +5,13 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            width: clamp(355px, 98vw, 600px); /*355px = largeur min | 98vw = en respectant 98% de la largeur de l'écran | 600px = largeur max */
+            width: clamp(355px, 98vw, 600px);
             margin: 5px auto;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             text-align: center;
             min-height: 100vh;
+            position: relative;
         }
         .container {
             background: rgba(255, 255, 255, 0.1);
@@ -31,26 +32,26 @@
             border-radius: 8px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
         }
-		.case span {
-			color: #fff;
+        .case span {
+            color: #fff;
             text-decoration: none;
-            font-size: clamp(16px, 2vw, 24px); /*16px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-size: clamp(16px, 2vw, 24px);
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
-		}
-		a.case {
-			text-decoration: none;
-			color: inherit;
-			display: block;
-		}
+        }
+        a.case {
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
         .leftspan span {
             text-align: left;
             margin: 5px auto;
             max-width: 90%;
             color: #fff;
             text-decoration: none;
-            font-size: clamp(16px, 2vw, 24px); /*16px = largeur min | 2vw = en respectant 2% de la largeur de l'écran | 24px = largeur max */
+            font-size: clamp(16px, 2vw, 24px);
             font-weight: bold;
             display: block;
             margin-bottom: 10px;
@@ -66,81 +67,90 @@
             margin: 5px auto;
             max-width: 90%;
         }
-        .back-arrow {
-        fill: rgba(0, 0, 255, 0.45);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        }
-        .back-arrow:hover {
-        fill: rgba(25, 65, 235, 0.65);
-        transform: scale(1.1);
-        }
-        .home-icon {
-        fill: rgba(0, 0, 255, 0.45);
-        cursor: pointer;
-        transition: all 0.3s ease;
-        }
-        .home-icon:hover {
-        fill: rgba(25, 65, 235, 0.65);
-        transform: scale(1.1);
-        }
         .nav-icons {
             position: absolute;
-            top: 0px;
-            left: 5px;
             display: flex;
             width: clamp(54px, 20vw, 108px);
             height: clamp(45px, 20vw, 90px);
+            z-index: 10;
+        }
+        .nav-button {
+            background: none;
+            border: none;
+            padding: 0;
+            margin: 0;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+            height: 50%;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+        }
+        .back-arrow,
+        .home-icon {
+            fill: rgba(0, 0, 255, 0.45);
+            transition: all 0.3s ease;
+            pointer-events: none;
+        }
+        .nav-button:hover .back-arrow,
+        .nav-button:hover .home-icon {
+            fill: rgba(25, 65, 235, 0.65);
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
+    <div class="nav-icons">
+        <button class="nav-button" onclick="goBack()">
+            <svg width="54" height="45" viewBox="0 0 24 24">
+                <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.42-1.41L7.83 13H20v-2z" class="back-arrow"></path>
+            </svg>
+        </button>
+
+        <button class="nav-button" onclick="goHome()">
+            <svg width="54" height="45" viewBox="0 0 24 24">
+                <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" class="home-icon"></path>
+            </svg>
+        </button>
+    </div>
+
     <div class="container">
-        
         <h1 style="margin-top:-10px;margin-bottom:10px;">Gaufres</h1>
         
-		<a class="case">
-            <div class="nav-icons">
-                <svg width="54" height="45" viewBox="0 0 24 24">
-                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.42-1.41L7.83 13H20v-2z" class="back-arrow"></path>
-                </svg>
-
-                <svg width="54" height="45" viewBox="0 0 24 24">
-                    <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" class="home-icon"></path>
-                </svg>
-            </div>
-
-			<div>
-				<span>Rendement : ? à ? gaufres<br>Recette de *</span>
-				<img src="image/Gaufres.png"><br><br>
-            <div class="leftspan">
-                <span>Ingrédients</span>
-                <ul style="margin-bottom:20px;margin-left:-20px;">
+        <div class="case">
+            <div>
+                <span>Rendement : ? à ? gaufres<br>Recette de *</span>
+                <img src="image/Gaufres.png"><br><br>
+                <div class="leftspan">
+                    <span>Ingrédients</span>
+                    <ul style="margin-bottom:20px;margin-left:-20px;">
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
                     
-                    <li></li>
-				    <li></li>
-				    <li></li>
-				    <li></li>
-				    <li></li>
-				    <li></li></ul>
-				
-				<span>Préparation</span>
-                <p></p>
-                <p></p>
-                <p></p>
-                </div></div>
-		</a>
-
+                    <span>Préparation</span>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
     </div>
-<script>
-//Retour en arrière
-document.querySelector('.back-arrow').addEventListener('click', function() {
-    window.history.back();
-});
 
-//Retourne au menu principal
-document.querySelector('.home-icon').addEventListener('click', function() {
-    window.location.href = '../../code/';
-});
-</script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goHome() {
+            window.location.href = '../../code/';
+        }
+    </script>
+
 </body></html>
